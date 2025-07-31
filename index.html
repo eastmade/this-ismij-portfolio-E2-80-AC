@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Portfolio - Ismij Hido</title>
+    <!-- Link to your external CSS file -->
+    <link rel="stylesheet" href="style.css">
+    <!-- CDNs for external libraries (Tailwind, Chart.js, Feather Icons) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="antialiased">
+
+    <header class="bg-white/80 backdrop-blur-md sticky top-0 z-50 shadow-sm">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="text-xl font-bold text-gray-800">
+                This Ismij Hido's Product Portfolio
+            </div>
+            <!-- Desktop Navigation - visible only on 2xl screens and up -->
+            <div class="hidden 2xl:flex space-x-8">
+                <a href="#about" class="nav-link text-gray-600 font-medium">About Me</a>
+                <a href="#product" class="nav-link text-gray-600 font-medium">Product</a>
+                <a href="#product-visuals" class="nav-link text-gray-600 font-medium">Product Display</a>
+                <a href="#approach" class="nav-link text-gray-600 font-medium">Approach</a>
+                <a href="#my-edge" class="nav-link text-gray-600 font-medium">My Edge</a>
+                <a href="#certifications" class="nav-link text-gray-600 font-medium">Certifications</a>
+                <a href="#my-passions" class="nav-link text-gray-600 font-medium">My Passions</a>
+                <a href="#testimonials" class="nav-link text-gray-600 font-medium">Testimonials</a>
+                <a href="#contact" class="nav-link text-gray-600 font-medium">Contact</a>
+            </div>
+            <!-- Mobile Menu Button - hidden only on 2xl screens and up -->
+            <div class="2xl:hidden">
+                <button id="menu-btn" class="text-gray-800 focus:outline-none" aria-label="Open mobile navigation menu">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Mobile Menu Overlay -->
+    <div id="menu-overlay" class="2xl:hidden"></div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="2xl:hidden">
+        <div class="mobile-menu-header">
+            <button id="back-mobile-menu-btn" class="back-btn" aria-label="Close mobile navigation menu">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-left"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+            </button>
+            <span class="page-title">This Ismij Hido</span>
+        </div>
+        <!-- Existing Navigation Links -->
+        <a href="#about" class="block py-2 nav-link text-gray-600">About Me</a>
+        <a href="#product" class="block py-2 nav-link text-gray-600">Product</a>
+        <a href="#product-visuals" class="block py-2 nav-link text-gray-600">Product Display</a>
+        <a href="#approach" class="block py-2 nav-link text-gray-600">Approach</a>
+        <a href="#my-edge" class="block py-2 nav-link text-gray-600">My Edge</a>
+        <a href="#certifications" class="block py-2 nav-link text-gray-600">Certifications</a>
+        <a href="#my-passions" class="block py-2 nav-link text-gray-600">My Passions</a>
+        <a href="#testimonials" class="block py-2 nav-link text-gray-600">Testimonials</a>
+        <a href="#contact" class="block py-2 nav-link text-gray-600">Contact</a>
+
+        <!-- New wrapper for CTA icons and copyright -->
+        <div class="mobile-footer-group">
+            <!-- New Mobile CTA Icons -->
+            <div class="mobile-cta-icons">
+                <a href="https://www.linkedin.com/in/hidayatim/" target="_blank" rel="noopener noreferrer" class="mobile-cta-icon-btn" aria-label="Visit my LinkedIn profile">
+                    <svg data-feather="linkedin" width="16" height="16"></svg>
+                </a>
+                <button id="open-contact-modal-mobile" class="mobile-cta-icon-btn" aria-label="Open email contact form">
+                    <svg data-feather="mail" width="16" height="16"></svg>
+                </button>
+                <a href="https://calendly.com/hidayatim/30min" target="_blank" rel="noopener noreferrer" class="mobile-cta-icon-btn" aria-label="Schedule a 30-Minute Call">
+                    <svg data-feather="calendar" width="16" height="16"></svg>
+                </a>
+                <a href="CVRésumé_Q3_2025(Muhammad_Ismij_Hidyat).pdf" download class="mobile-cta-icon-btn" aria-label="Download My CV/Resume">
+                    <svg data-feather="download" width="16" height="16"></svg>
+                </a>
+            </div>
+            <!-- Mobile Menu Copyright -->
+            <p class="mobile-menu-copyright">&copy; 2023 Muhammad Ismij Hidayat</p>
+        </div>
+    </div>
+
+    <div id="content-wrapper">
+        <main>
+            <section id="hero" class="py-20 md:py-32 bg-white fade-in-section">
+                <div class="container mx-auto px-6 text-center">
+                    <h1 class="text-4xl md:text-6xl font-bold text-gray-800 leading-tight">Muhammad Ismij Hidayat</h1>
+                    <p class="mt-4 text-lg md:text-xl text-gray-600"><strong class="text-gray-800">Design with Intention Deliver with Impact Driven by Purpose Lead with Empathy</strong><br><strong class="text-gray-800">Solving Real Problems Serving Real People</strong><br><strong class="text-gray-800">Keep Building! Keep Improving!</strong><br><span id="years-experience" data-target="5">0</span>+ Years in Digital Product Development</p>
+                    <a href="#product" class="mt-8 inline-block bg-gray-800 text-white font-bold rounded-lg px-8 py-3 hover:bg-gray-700 transition-colors duration-300 shadow-lg">View My Case Study</a>
+                </div>
+            </section>
+
+            <section id="about" class="py-20 fade-in-section">
+                <div class="container mx-auto px-6">
+                    <div class="text-center mb-12">
+                        <h2 class="text-3xl font-bold text-gray-800">Data-Driven & User-Driven Product Manager</h2>
+                        <p class="mt-2 text-lg text-gray-600 max-w-3xl mx-auto">I am an experienced Product Manager passionate about building <strong class="text-gray-800">user-centric solutions</strong><br>I combine <strong class="text-gray-800">business strategy with user insights</strong> to create digital products that not only succeed in the market but are also loved by users</p>
+                    </div>
+                    <div class="grid md:grid-cols-3 gap-8 text-center">
+                        <div class="bg-white p-8 rounded-xl shadow-md border border-gray-100 transition-all duration-300 hover:shadow-lg hover:scale-105">
+                            <div class="text-4xl mb-4">🤝</div>
+                            <h3 class="text-xl font-semibold text-gray-800 mb-2">Cross-Functional Leadership</h3>
+                            <p class="text-gray-600">Skilled in leading multidisciplinary teams (engineering, design, business) to achieve common goals efficiently. Strong ownership mindset.</p>
+                        </div>
+                        <div class="bg-white p-8 rounded-xl shadow-md border border-gray-100 transition-all duration-300 hover:shadow-lg hover:scale-105">
+                            <div class="text-4xl mb-4">🚀</div>
+                            <h3 class="text-xl font-semibold text-gray-800 mb-2">Focus on Execution</h3>
+                            <p class="text-gray-600">Experienced in turning product strategies into real features that deliver measurable impact to the business, prioritizing cost efficiency, cash flow, and ROI.</p>
+                        </div>
+                        <div class="bg-white p-8 rounded-xl shadow-md border border-gray-100 transition-all duration-300 hover:shadow-lg hover:scale-105">
+                            <div class="text-4xl mb-4">🌍</div>
+                            <h3 class="text-xl font-semibold text-gray-800 mb-2">Multi-Industry Experience</h3>
+                            <p class="text-gray-600">Having experience in various sectors: POS SaaS Fintech, HRIS Tech, and Insurtech, gives me a rich perspective. High-Accuracy, and Mobile-First environments.</p>
+                        </div>
+                    </div>
+                    <!-- New CTA after About Me section -->
+                    <div class="text-center mt-12">
+                        <a href="#contact" class="inline-block bg-orange-600 text-white font-bold rounded-lg px-8 py-3 hover:bg-orange-700 transition-colors duration-300 shadow-lg">Let's Connect</a>
+                    </div>
+                </div>
+            </section>
+
+            <section id="product" class="py-20 bg-gray-50 fade-in-section">
+                <div class="container mx-auto px-6">
+                    <div class="text-center mb-12">
+                        <h2 class="text-3xl font-bold text-gray-800">My Product Case Study</h2>
+                        <p class="mt-2 text-lg text-gray-600">Select a product to see how I turned challenges into measurable results</p>
+                    </div>
+                    
+                    <!-- Project Selector for Case Study -->
+                    <div id="product-selector" class="flex flex-wrap justify-center gap-3 md:gap-4 mb-10">
+                    </div>
+
+                    <div class="bg-white rounded-xl shadow-lg border border-gray-100 p-6 md:p-10 transition-all duration-500">
+                        <!-- Project Title and Logo moved here to span full width -->
+                        <div class="flex items-center mb-4">
+                            <img id="project-logo" src="" alt="Project Logo" class="w-12 h-12 mr-3 rounded-lg object-contain">
+                            <h3 id="project-title" class="text-2xl font-bold text-gray-800"></h3>
+                        </div>
+                        <div class="grid lg:grid-cols-5 gap-8">
+                            <div class="lg:col-span-2">
+                                <p id="project-role" class="font-medium text-gray-500 mb-2"></p>
+                                <a id="project-link" href="#" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline text-sm mb-4 block"></a>
+                                
+                                <h4 class="font-semibold text-gray-700 mt-6 mb-2">Key Challenges</h4>
+                                <p id="project-problem" class="text-gray-600"></p>
+
+                                <h4 class="font-semibold text-gray-700 mt-6 mb-2">Some Key Initiatives</h4>
+                                <ul id="project-initiatives" class="list-disc list-inside text-gray-600 space-y-1">
+                                </ul>
+                            </div>
+                            <div class="lg:col-span-3 flex flex-col items-center justify-center">
+                                <h4 class="text-lg font-semibold text-gray-700 mb-2 text-center">Impact Visualization</h4>
+                                <p class="text-center mt-3 text-sm text-gray-500">
+                                    <span id="project-result-prefix" class="font-bold text-gray-800"></span>
+                                    <span id="project-result-value" class="font-bold text-gray-800">0</span>
+                                    <span id="project-result-unit" class="font-bold text-gray-800"></span>
+                                    <span id="project-result-description-text"></span>
+                                </p>
+                                <p id="project-overall-contribution" class="text-center mt-2 text-base font-semibold text-gray-700"></p>
+                                <div class="chart-container">
+                                    <canvas id="project-chart"></canvas>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- New Section for Product Visuals -->
+            <section id="product-visuals" class="py-20 fade-in-section">
+                <div class="container mx-auto px-6">
+                    <div class="text-center mb-12">
+                        <h2 class="text-3xl font-bold text-gray-800">Product Display</h2>
+                        <p class="mt-2 text-lg text-gray-600">Product display on mobile mockups</p>
+                    </div>
+
+                    <!-- Mockup Container for all Phone Mockups -->
+                    <div class="mockup-container">
+                        <!-- Labamu Mockup Container -->
+                        <div class="flex flex-col items-center">
+                            <div class="flex items-center mb-4 bg-white p-3 rounded-lg shadow-md">
+                                <img src="https://res.cloudinary.com/dnxqhmprj/image/upload/0dd2ff_5657d3c8e5d642a28f53e1d4fa223a7c_mv2_cemoaw.png" alt="Labamu Logo" class="w-10 h-10 mr-2 rounded-md object-contain">
+                                <h3 class="text-xl font-semibold text-gray-800">Labamu</h3>
+                            </div>
+                            <div class="phone-mockup">
+                                <div class="side-button volume-up"></div>
+                                <div class="side-button volume-down"></div>
+                                <div class="side-button power"></div>
+                                <div class="screen">
+                                    <div id="labamu-phone-carousel" class="carousel-inner">
+                                        <!-- Images will be dynamically loaded here by JS -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Appsensi Mockup Container -->
+                        <div class="flex flex-col items-center">
+                            <div class="flex items-center mb-4 bg-white p-3 rounded-lg shadow-md">
+                                <img src="https://res.cloudinary.com/dnxqhmprj/image/upload/Logo_Appsensi_o7eoj5.png" alt="Appsensi Logo" class="w-10 h-10 mr-2 rounded-md object-contain">
+                                <h3 class="text-xl font-semibold text-gray-800">Appsensi</h3>
+                            </div>
+                            <div class="phone-mockup">
+                                <div class="side-button volume-up"></div>
+                                <div class="side-button volume-down"></div>
+                                <div class="side-button power"></div>
+                                <div class="screen">
+                                    <div id="appsensi-phone-carousel" class="carousel-inner">
+                                        <!-- Images will be dynamically loaded here by JS -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Lifepal Mockup Container -->
+                        <div class="flex flex-col items-center">
+                            <div class="flex items-center mb-4 bg-white p-3 rounded-lg shadow-md">
+                                <img src="https://res.cloudinary.com/dnxqhmprj/image/upload/105680_fnytej.png" alt="Lifepal Logo" class="w-10 h-10 mr-2 rounded-md object-contain">
+                                <h3 class="text-xl font-semibold text-gray-800">Lifepal</h3>
+                            </div>
+                            <div class="phone-mockup">
+                                <div class="side-button volume-up"></div>
+                                <div class="side-button volume-down"></div>
+                                <div class="side-button power"></div>
+                                <div class="screen">
+                                    <div id="lifepal-phone-carousel" class="carousel-inner">
+                                        <!-- Images will be dynamically loaded here by JS -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="approach" class="py-20 fade-in-section">
+                <div class="container mx-auto px-6">
+                    <div class="text-center mb-12">
+                        <h2 class="text-3xl font-bold text-gray-800">Approach & Expertise</h2>
+                        <p class="mt-2 text-lg text-gray-600">The frameworks and tools I use to build great products</p>
+                    </div>
+                    
+                    <div class="max-w-4xl mx-auto">
+                        <div class="border-b border-gray-200 mb-8">
+                            <nav class="-mb-px flex justify-center space-x-8" aria-label="Tabs">
+                                <button data-tab="approach" class="tab-btn whitespace-nowrap py-4 px-1 border-b-2 font-medium text-sm text-gray-500 hover:text-gray-700 hover:border-gray-300">
+                                    My Work Process
+                                </button>
+                                <button data-tab="tools" class="tab-btn whitespace-nowrap py-4 px-1 border-b-2 font-medium text-sm text-gray-500 hover:text-gray-700 hover:border-gray-300">
+                                    Tools & Technologies
+                                </button>
+                            </nav>
+                        </div>
+
+                        <div id="tab-content">
+                            <div id="approach-content" class="tab-pane">
+                                <div class="grid md:grid-cols-3 gap-8 text-center">
+                                    <div class="p-6 bg-white rounded-xl shadow-md border border-gray-100">
+                                        <h3 class="text-xl font-semibold text-gray-800">1. Discovery & Strategy</h3>
+                                        <p class="mt-2 text-gray-600">This phase involves <strong class="text-gray-800">briefing</strong> with stakeholders to gather requirements, followed by in-depth <strong class="text-800">research</strong> (market analysis, competitor review, user interviews, field observations, data analysis) to thoroughly understand the '<strong>WHY</strong>' and define the problem space.<br><br>This leads to shaping the initial product strategy.</p>
+                                    </div>
+                                    <div class="p-6 bg-white rounded-xl shadow-md border border-gray-100">
+                                        <h3 class="text-xl font-semibold text-gray-800">2. Design & Delivery</h3>
+                                        <p class="mt-2 text-gray-600">Here, we <strong class="text-gray-800">brainstorm & create</strong> solutions through rapid prototyping, wire-framing, and collaborative discussions with designers and developers.<br><br>This feeds into working within an Agile <em>Squad</em>, managing the <em>Backlog</em>, and collaborating closely with the QA Team for quality delivery.</p>
+                                    </div>
+                                    <div class="p-6 bg-white rounded-xl shadow-md border border-gray-100">
+                                        <h3 class="text-xl font-semibold text-gray-800">3. Launch & Iteration</h3>
+                                        <p class="mt-2 text-gray-600">This final stage includes the <strong class="text-gray-800">launch</strong> of the product, followed by continuous measurement of its success against defined metrics.<br><br><strong class="text-gray-800">Decision Making</strong> then occurs by balancing user insights, business OKRs, and effort tradeoffs to inform future iterations and product evolution.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="tools-content" class="tab-pane hidden">
+                                <div class="space-y-6">
+                                    <div>
+                                        <h4 class="font-semibold text-gray-700 mb-3 text-center">Product & Project Management</h4>
+                                        <div class="flex flex-wrap justify-center gap-2">
+                                            <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm">Jira</span>
+                                            <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm">Confluence</span>
+                                            <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm">Trello</span>
+                                            <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm">Notion</span>
+                                            <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm">Google Workspace</span>
+                                            <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm">Office 360</span>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-semibold text-gray-700 mb-3 text-center">Analytic</h4>
+                                        <div class="flex flex-wrap justify-center gap-2">
+                                            <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">Google Analytics</span>
+                                            <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">Mixpanel</span>
+                                            <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">Firebase</span>
+                                            <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">Posthog</span>
+                                            <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">META</span>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-semibold text-gray-700 mb-3 text-center">Prototyping Design & Other</h4>
+                                        <div class="flex flex-wrap justify-center gap-2">
+                                            <span class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm">Figma</span>
+                                            <span class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm">Adobe Photoshop</span>
+                                            <span class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm">Axure RP</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- New CTA after Approach & Expertise section -->
+                    <div class="text-center mt-12">
+                        <a href="#contact" class="inline-block bg-gray-800 text-white font-bold rounded-lg px-8 py-3 hover:bg-gray-700 transition-colors duration-300 shadow-lg">Schedule a Call</a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Combined "My Unique Edge" Section -->
+            <section id="my-edge" class="py-20 bg-white fade-in-section">
+                <div class="container mx-auto px-6">
+                    <div class="text-center mb-12">
+                        <h2 class="text-3xl font-bold text-gray-800">My Unique Edge</h2>
+                        <p class="mt-2 text-lg text-gray-600 max-w-3xl mx-auto">Discover what truly sets me apart and where I'm continuously growing</p>
+                    </div>
+
+                    <!-- What I Bring Sub-section -->
+                    <div class="mb-12">
+                        <h3 class="text-2xl font-bold text-gray-800 text-center mb-6">What I Bring</h3>
+                        <div class="grid md:grid-cols-2 gap-8 text-left">
+                            <div class="bg-gray-50 p-8 rounded-xl shadow-md border border-gray-100 transition-all duration-300 hover:shadow-lg hover:scale-105">
+                                <h4 class="text-xl font-semibold text-gray-800 mb-2">Execution-Focused & Diverse Experience</h4>
+                                <p class="text-gray-700">With a strong ownership mindset, I excel at transforming product strategy into impactful execution across B2B and B2C tech and managing end-to-end client solutions.</p>
+                            </div>
+                            <div class="bg-gray-50 p-8 rounded-xl shadow-md border border-gray-100 transition-all duration-300 hover:shadow-lg hover:scale-105">
+                                <h4 class="text-xl font-semibold text-gray-800 mb-2">Collaborative & Innovative Leadership</h4>
+                                <p class="text-gray-700">I thrive on fostering creative and energetic brainstorming sessions, ensuring every voice is heard and innovative ideas flourish in a collaborative environment.</p>
+                            </div >
+                            <div class="bg-gray-50 p-8 rounded-xl shadow-md border border-gray-100 transition-all duration-300 hover:shadow-lg hover:scale-105">
+                                <h4 class="text-xl font-semibold text-gray-800 mb-2">Commercial Acumen & Customer Focus</h4>
+                                <p class="text-gray-700">My background in a trading family and small business operations instilled strong commercial instincts and a relentless customer-centric mindset, driving tangible business value.</p>
+                            </div>
+                            <div class="bg-gray-50 p-8 rounded-xl shadow-md border border-gray-100 transition-all duration-300 hover:shadow-lg hover:scale-105">
+                                <h4 class="text-xl font-semibold text-gray-800 mb-2">Lifelong Learner & Global Adaptability</h4>
+                                <p class="text-gray-700">From traditional typewriters to cutting-edge AI, my tech passion drives continuous learning. Living in multiple countries also provides cross-cultural understanding for inclusive product design.</p>
+                            </div>
+                        </div>
+                        <!-- Removed: My diverse hobbies paragraph -->
+                    </div>
+
+                    <!-- Areas for Continuous Growth Sub-section -->
+                    <div class="mt-12">
+                        <h3 class="text-2xl font-bold text-gray-800 text-center mb-6">Areas for Continuous Growth</h3>
+                        <div class="grid md:grid-cols-2 gap-8 text-left">
+                            <div class="bg-yellow-50 p-8 rounded-xl shadow-md border border-yellow-200 transition-all duration-300 hover:shadow-lg hover:scale-105 md:col-span-2">
+                                <p class="text-gray-700"><strong>Balancing Depth with Speed:</strong> Actively working on optimizing my deep-dive approach to ensure efficient progress without compromising quality, especially in fast-paced environments.</p>
+                                <p class="text-gray-700 mt-2"><strong>Structured Communication:</strong> Continuously refining my ability to present complex information concisely and with ideal formatting, particularly in high-level strategy documents and presentations.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- New Certifications Section - Moved Here -->
+            <section id="certifications" class="py-20 bg-white fade-in-section">
+                <div class="container mx-auto px-6">
+                    <div class="text-center mb-12">
+                        <h2 class="text-3xl font-bold text-gray-800">My Certifications</h2>
+                        <p class="mt-2 text-lg text-gray-600">Proof of my continuous learning and expertise</p>
+                    </div>
+                    <div id="certifications-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 text-center">
+                        <!-- Certifications will be dynamically loaded here by JS -->
+                    </div>
+                </div>
+            </section>
+
+            <!-- New My Passions Section (Re-added) -->
+            <section id="my-passions" class="py-20 bg-gray-100 fade-in-section">
+                <div class="container mx-auto px-6">
+                    <div class="text-center mb-12">
+                        <h2 class="text-3xl font-bold text-gray-800">My Passions Beyond Work</h2>
+                        <p class="mt-2 text-lg text-gray-600 max-w-3xl mx-auto">A glimpse into the activities that fuel my creativity, discipline, and adaptability</p>
+                    </div>
+                    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                        <!-- Placeholder Video 1: Product Community Engagement -->
+                        <div class="bg-gray-50 p-4 rounded-xl shadow-md border border-gray-100 flex flex-col items-center justify-center">
+                            <h3 class="text-xl font-semibold text-gray-800 mb-4 text-center">Product Community</h3>
+                            <div class="relative w-full" style="padding-top: 56.25%;">
+                                <iframe class="absolute top-0 left-0 w-full h-full rounded-lg" src="https://www.youtube.com/embed/l9qedJqJWPs?si=1r_ddYPIm0n32jqd" title="Product Community Engagement" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            </div>
+                            <p class="text-gray-700 text-sm mt-4 text-center">Connecting with peers, sharing experiences, and co-creating solutions in the product ecosystem.</p>
+                        </div>
+                        <!-- Placeholder Video 2: Singing & Music Composing -->
+                        <div class="bg-gray-50 p-4 rounded-xl shadow-md border border-gray-100 flex flex-col items-center justify-center">
+                            <h3 class="text-xl font-semibold text-gray-800 mb-4 text-center">Singing & Music Composing</h3>
+                            <div class="relative w-full" style="padding-top: 56.25%;">
+                                <iframe class="absolute top-0 left-0 w-full h-full rounded-lg" src="https://www.youtube.com/embed/VIDEO_ID_2" title="Singing & Music Composing" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            </div>
+                            <p class="text-gray-700 text-sm mt-4 text-center">Expressing creativity through melodies and harmonies, fostering my innovative thinking skill.</p>
+                        </div>
+                        <!-- Placeholder Video 3: Biking, Strength Training, & Archery -->
+                        <div class="bg-gray-50 p-4 rounded-xl shadow-md border border-gray-100 flex flex-col items-center justify-center">
+                            <h3 class="text-xl font-semibold text-gray-800 mb-4 text-center">Outdoor & Endurance</h3>
+                            <div class="relative w-full" style="padding-top: 56.25%;">
+                                <iframe class="absolute top-0 left-0 w-full h-full rounded-lg" src="https://www.youtube.com/embed/VIDEO_ID_3" title="Biking, Strength Training, & Archery" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-picture" allowfullscreen></iframe>
+                            </div>
+                            <p class="text-gray-700 text-sm mt-4 text-center">Focus, precision, and mental discipline through overcoming diverse challenges.</p>
+                        </div>
+                        <!-- You can add more video placeholders here if needed -->
+                    </div>
+                    <!-- Moved: My diverse hobbies paragraph -->
+                    <div class="text-center mt-12">
+                        <p class="text-lg text-gray-600 font-semibold">My diverse passions, including product community engagement, archery, biking, singing & music composing, and strength training, help to foster the discipline, creativity, and adaptability I bring to every product challenge</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="testimonials" class="py-20 bg-gray-100 fade-in-section">
+                <div class="container mx-auto px-6">
+                    <div class="text-center mb-12">
+                        <h2 class="text-3xl font-bold text-gray-800">What They Say About Me</h2>
+                        <p class="mt-2 text-lg text-gray-600">A few quotes from colleagues and leaders</p>
+                    </div>
+                    <div class="grid md:grid-cols-2 gap-8">
+                        <div class="bg-white p-6 rounded-xl shadow-md border border-gray-100">
+                            <p class="text-gray-700 italic mb-4">"Hidayat is a very intelligent person who always retains his passion. He is helpful and has great ideas. He has very professional analytical and summarizing skills, and in the past he has provided the team with many useful research findings and product analysis and design. We all appreciate him."</p>
+                            <p class="text-gray-800 font-semibold">- Tonghui Shen, Product Director</p>
+                        </div>
+                        <div class="bg-white p-6 rounded-xl shadow-md border border-gray-100">
+                            <p class="text-gray-700 italic mb-4">"Hidayat is a smart guy and loves to understand the problems in depth by asking right set of questions which shows he has a great potential to be a very fine and polished product leader. He has shown great persistence and urge of learning during his journey at Lifepal and thus I recommend firms to consider him for product roles and other projects management roles."</p>
+                            <p class="text-gray-800 font-semibold">- Shivang Gupta, AI Leader - Product Expert</p>
+                        </div>
+                        <!-- New Testimonials Added Below -->
+                        <div class="bg-white p-6 rounded-xl shadow-md border border-gray-100">
+                            <p class="text-gray-700 italic mb-4">"Ismij's ability to create clear and comprehensive PRDs made our tasks as developers straightforward and well-guided. His documents were not only meticulous in detailing what was needed but also why each element was important, aligning the entire team with the project's vision and objectives. This clarity was instrumental in enhancing our efficiency and effectiveness in development.
+
+As a Mobile Developer, I especially appreciated Ismij's collaborative approach. He consistently demonstrated a deep understanding of product development intricacies, which significantly contributed to the success of our projects. His capacity to dissect complex issues and articulate clear, actionable solutions was invaluable."</p>
+                            <p class="text-gray-800 font-semibold">- Bagus Kurnianto, Lead Software Engineer</p>
+                        </div>
+                        <div class="bg-white p-6 rounded-xl shadow-md border border-gray-100">
+                            <p class="text-gray-700 italic mb-4">"I had the pleasure of working alongside Muhammad Ismij Hidayat while at Lifepal as a Product Designer. Working collaboratively with Muhammad Ismij Hidayat as a Product Designer at Lifepal. Throughout our time working together, I was continually impressed by his dedicated professionalism and intuitive product knowledge. His strong managerial skills were a vital contribution to the success of our product development team at Lifepal.
+
+He was a valuable asset to the product development team and He was able to effectively manage multiple projects while maintaining a high level of quality, making him an exceptional Product Manager. I highly recommend Muhammad Ismij Hidayat for any Product Management role, as he is a dedicated and talented professional who will bring value to any organization."</p>
+                            <p class="text-gray-800 font-semibold">- Tobi Santoso, Product Designer</p>
+                        </div>
+                        <div class="bg-white p-6 rounded-xl shadow-md border border-gray-100">
+                            <p class="text-gray-700 italic mb-4">"Hidayat is always open for discussions when our team comes to difficulties and challenges which is very helpful to sum up all of our individual findings to make better decisions or solutions."</p>
+                            <p class="text-gray-800 font-semibold">- Indra Tanaya, Software Development Engineer</p>
+                        </div>
+                        <div class="bg-white p-6 rounded-xl shadow-md border border-gray-100">
+                            <p class="text-gray-700 italic mb-4">"A great leader is not a dictator, but a caring mentor. Ismed is that kind of manager, great problem solver, smart and goal-oriented person."</p>
+                            <p class="text-gray-800 font-semibold">- Ken Bagas Nandito Pandjaitan, Developer</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer id="contact" class="bg-gray-800 text-white fade-in-section">
+            <div class="container mx-auto px-6 py-12 text-center">
+                <h2 class="text-3xl font-bold">Let's Discuss!</h2>
+                <p class="mt-4 max-w-xl mx-auto">I'm ready to help take your product to the next level
+                <br>Let's Connect!</p>
+                <div class="mt-8 flex flex-col items-center justify-center space-y-4 footer-btn-group">
+                    <a href="https://www.linkedin.com/in/hidayatim/" target="_blank" rel="noopener noreferrer" class="hover:text-orange-300 transition-colors flex items-center justify-center font-bold px-6 py-3 bg-gray-700 text-white rounded-lg shadow-lg hover:bg-gray-600 w-full" aria-label="Visit my LinkedIn profile">
+                        <svg data-feather="linkedin" width="20" height="20" class="mr-2"></svg>
+                        LinkedIn
+                    </a>
+                    <button id="open-contact-modal" class="inline-flex items-center justify-center bg-gray-700 text-white font-bold rounded-lg px-6 py-3 hover:bg-gray-600 transition-colors duration-300 shadow-lg w-full" aria-label="Open email contact form">
+                        <svg data-feather="mail" width="20" height="20" class="mr-2"></svg>
+                        Send a Note via Email
+                    </button>
+                    <!-- New Schedule a Call Button -->
+                    <a href="https://calendly.com/hidayatim/30min" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center bg-gray-700 text-white font-bold rounded-lg px-6 py-3 hover:bg-gray-600 transition-colors duration-300 shadow-lg w-full" aria-label="Schedule a 30-Minute Call">
+                        <svg data-feather="calendar" width="20" height="20" class="mr-2"></svg>
+                        Schedule a 30-Minute Call
+                    </a>
+                    <a href="CVRésumé_Q3_2025(Muhammad_Ismij_Hidyat).pdf" download class="inline-flex items-center justify-center bg-orange-600 text-white font-bold rounded-lg px-8 py-3 hover:bg-orange-700 transition-colors duration-300 shadow-lg w-full" aria-label="Download My Resume/CV">
+                        <svg data-feather="download" width="20" height="20" class="mr-2"></svg>
+                        Download My CV/Resume
+                    </a>
+                </div>
+                <div class="mt-10 border-t border-gray-700 pt-6">
+                    <p class="text-gray-400 text-sm">&copy; 2023 Muhammad Ismij Hidayat</p>
+                </div>
+            </div>
+        </footer>
+    </div> <!-- End of content-wrapper -->
+
+    <!-- Contact Modal -->
+    <div id="contact-modal-overlay" class="modal-overlay">
+        <div class="modal-content">
+            <button id="modal-close-btn" class="modal-close-btn" aria-label="Close contact form">&times;</button>
+            <h3 class="text-2xl font-bold text-gray-800 mb-6 text-center">Send Me a Message</h3>
+            <form id="contact-form" class="space-y-4">
+                <div>
+                    <label for="contact-name" class="block text-gray-700 text-sm font-medium mb-1">Name</label>
+                    <input type="text" id="contact-name" name="name" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-orange-500" placeholder="Your Name" required aria-required="true">
+                    <span id="name-error" class="error-message"></span>
+                </div>
+                <div>
+                    <label for="contact-email" class="block text-gray-700 text-sm font-medium mb-1">Email</label>
+                    <input type="email" id="contact-email" name="email" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-orange-500" placeholder="your.email@example.com" required aria-required="true">
+                    <span id="email-error" class="error-message"></span>
+                </div>
+                <div>
+                    <label for="contact-message" class="block text-gray-700 text-sm font-medium mb-1">Message</label>
+                    <textarea id="contact-message" name="message" rows="5" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-orange-500" placeholder="Your message..." required aria-required="true"></textarea>
+                    <span id="message-error" class="error-message"></span>
+                </div>
+                <button type="submit" class="w-full bg-gray-800 text-white font-bold rounded-lg px-6 py-3 hover:bg-gray-700 transition-colors duration-300 shadow-lg">Send Message</button>
+            </form>
+            <div id="form-feedback" class="message-feedback hidden"></div>
+        </div>
+    </div>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" title="Back to Top" aria-label="Back to top of page">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-up"><line x1="12" y1="19" x2="12" y2="5"></line><polyline points="5 12 12 5 19 12"></polyline></svg>
+    </button>
+
+    <!-- Floating Audio Container with Play/Pause and Volume -->
+    <div id="floating-audio-container" class="fixed bottom-20 left-0 z-1000 flex flex-col-reverse items-center">
+        <!-- Play/Pause Button (at the bottom of the column) -->
+        <button id="floating-audio-btn" title="Play/Pause Audio" aria-label="Play or pause background audio" class="flex items-center justify-center w-10 h-10 rounded-full bg-gray-700 hover:bg-gray-600 transition-colors duration-300">
+            <!-- Play icon (default) -->
+            <svg id="play-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-play">
+                <polygon points="5 3 19 12 5 21 5 3"></polygon>
+            </svg>
+            <!-- Pause icon (hidden by default) -->
+            <svg id="pause-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-pause hidden">
+                <line x1="6" y1="4" x2="6" y2="20"></line>
+                <line x1="18" y1="4" x2="18" y2="20"></line>
+            </svg>
+        </button>
+        <!-- Volume Slider (on top of the button) -->
+        <input type="range" id="volume-slider" min="0" max="1" step="0.01" value="1">
+    </div>
+
+    <!-- Hidden Audio Element -->
+    <audio id="background-audio" loop autoplay>
+        <!-- Replace 'YOUR_AUDIO_FILE.mp3' with the actual URL to your audio file -->
+        <source src="https://res.cloudinary.com/dnxqhmprj/video/upload/Beyond_Features__The_Data-Driven_User-Centric_Product_Manager_s_Blueprint_for_Impact_jkkmzd.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+    <!-- Link to your external JavaScript file -->
+    <script src="script.js"></script>
+</body>
+</html>
